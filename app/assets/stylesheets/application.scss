@@ -1,0 +1,105 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "materialize";
+
+.round-image-50 {
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img { object-fit: cover;}
+}
+
+body {
+  font-family: 'Rubik Mono One', sans-serif;
+  .modal {
+    background:rgba(0,0,0, 0.7);
+  }
+  background-color: black;
+  color: white;
+  #graph {
+    display: none;
+    position: fixed;
+    left:10px;
+    top:100px;
+  }
+  nav {
+    background-color: green;
+  }
+  .axis, .tick {
+    line {
+      stroke: white;
+    }
+    stroke: white;
+  }
+}
+
+@media only screen and (min-width: 993px){
+  .container {
+    width: 85%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+.select-wrapper {
+  background-color: aqua;
+  padding-left: 10px;
+    input.select-dropdown {
+    color: black;
+  }
+}
+
+#visualization rect {
+   fill: blue;
+ }
+
+#visualization text {
+   fill: white;
+   font: 10px sans-serif;
+   text-anchor: end;
+ }
+
+.graticule {
+  fill: none;
+  stroke: #79A09E;
+  stroke-width: 1;
+  stroke-dasharray: 1,1;
+}
+
+.water {
+  fill: aqua;
+}
+
+.country-info {
+  position: absolute;
+  display: none;
+  pointer-events: none;
+  background: #fff;
+  padding: 5px;
+  text-align: left;
+  border: solid #ccc 1px;
+  color: #666;
+  font-size: 14px;
+  font-family: sans-serif;
+}
